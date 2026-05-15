@@ -52,6 +52,8 @@ app.use((err, _req, res, _next) => {
   res.status(400).json({ message: err.message || 'Terjadi kesalahan.' });
 });
 
-app.listen(port, () => {
-  console.log(`Backend berjalan di http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Backend berjalan di http://localhost:${port}`);
+// });
+
+export default app;
