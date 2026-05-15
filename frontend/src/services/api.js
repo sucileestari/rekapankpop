@@ -44,11 +44,11 @@ async function request(path, options = {}) {
 
 export const api = {
   login(payload) {
-  return request('/auth/login', {
-    method: 'POST',
-    body: payload
-  });
-},
+    return request('/auth/login', {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    });
+  },
   getMembers(search = '') {
     return request(`/members?search=${encodeURIComponent(search)}`);
   },
